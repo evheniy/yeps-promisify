@@ -1,0 +1,25 @@
+{
+  "name": "yeps-promisify",
+  "version": "0.0.1",
+  "description": "Recursive loop promise generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evheniy/yeps-promisify.git"
+  },
+  "keywords": [
+    "yeps",
+    "recursive",
+    "promise",
+    "generator"
+  ],
+  "author": "Evheniy Bystrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evheniy/yeps-promisify/issues"
+  },
+  "homepage": "https://github.com/evheniy/yeps-promisify#readme"
+}

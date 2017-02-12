@@ -1,6 +1,6 @@
 {
   "name": "yeps-promisify",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Recursive loop promise generator",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,9 @@
     "url": "https://github.com/evheniy/yeps-promisify/issues"
   },
   "homepage": "https://github.com/evheniy/yeps-promisify#readme",
+  "files": [
+    "index.js"
+  ],
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.16",

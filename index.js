@@ -5,7 +5,7 @@ const promisify = module.exports = async (ctx, promises) => {
     debug(promises);
 
     if (promises.length) {
-        const promise = promises.pop();
+        const promise = promises.shift();
         await promise(ctx);
         return promisify(ctx, promises);
     } else {

@@ -10,4 +10,26 @@ It helps with looping promises. It's promises middleware realisation.
 [![devDependency Status](https://david-dm.org/evheniy/yeps-promisify/dev-status.svg)](https://david-dm.org/evheniy/yeps-promisify#info=devDependencies)
 [![NSP Status](https://img.shields.io/badge/NSP%20status-no%20vulnerabilities-green.svg)](https://travis-ci.org/evheniy/yeps-promisify)
 
+## How to install
+
+    npm i -S yeps-promisify
+
+## How to use
+
+    const promisify = require('yeps-promisify');
+    
+    async () => {
+        const context = { data };
+        const promises = [
+            async context => {
+                // some stuff with context
+            }
+        ];
+        
+        try {
+            await promisify(context, promises);
+        } catch (error) {
+            // error handler
+        }
+        
 More details on [yeps project page](https://github.com/evheniy/yeps)

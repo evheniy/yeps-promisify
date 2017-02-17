@@ -19,11 +19,13 @@ It helps with looping promises. It's promises middleware realisation.
     const promisify = require('yeps-promisify');
     
     async () => {
-        const context = { data };
+        const context = {};
+        
         const promises = [
             async context => {
                 // some stuff with context
-            }
+            },
+            ...
         ];
         
         try {
@@ -31,5 +33,6 @@ It helps with looping promises. It's promises middleware realisation.
         } catch (error) {
             // error handler
         }
+    }    
         
 More details on [yeps project page](https://github.com/evheniy/yeps)

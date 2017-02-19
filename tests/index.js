@@ -1,9 +1,9 @@
 const expect = require('chai').expect;
-const promisify = require('../index');
+const promisify = require('..');
 
 describe('Promisify test', () => {
 
-    it('it should test promises', async () => {
+    it('should test promises', async () => {
 
         let isFirstPromiseDone = false;
         let isSecondPromiseDone = false;
@@ -11,18 +11,16 @@ describe('Promisify test', () => {
         const context = {};
 
         const promises = [
-            ctx => Promise.resolve().then(() => {
+            async ctx => {
                 expect(ctx).is.not.undefined;
                 expect(ctx).to.be.equal(context);
                 isFirstPromiseDone = true;
-                return true;
-            }),
-            ctx => Promise.resolve().then(() => {
+            },
+            async ctx => {
                 expect(ctx).is.not.undefined;
                 expect(ctx).to.be.equal(context);
                 isSecondPromiseDone = true;
-                return true;
-            }),
+            },
         ];
 
 
@@ -30,6 +28,31 @@ describe('Promisify test', () => {
 
         expect(isFirstPromiseDone).is.true;
         expect(isSecondPromiseDone).is.true;
+
+    });
+
+    it('should run it 5 times ', async () => {
+
+        let times = 0;
+
+        const context = {};
+
+        const promises = [
+            async ctx => {
+                expect(ctx).is.not.undefined;
+                expect(ctx).to.be.equal(context);
+                times++;
+            },
+        ];
+
+
+        await promisify(context, promises);
+        await promisify(context, promises);
+        await promisify(context, promises);
+        await promisify(context, promises);
+        await promisify(context, promises);
+
+        expect(times).to.be.equal(5);
 
     });
 });

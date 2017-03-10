@@ -1,6 +1,6 @@
 {
   "name": "yeps-promisify",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Recursive loop promise generator",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,15 @@
     "lint:js": "./node_modules/.bin/eslint index.js tests",
     "test": "./node_modules/.bin/npm-run-all --parallel test:**",
     "test:security": "./node_modules/.bin/nsp check",
-    "test:code": "node --harmony ./node_modules/mocha/bin/_mocha tests --recursive",
-    "test:coverage": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- tests --recursive",
+    "test:code": "./node_modules/mocha/bin/_mocha tests --recursive",
+    "test:coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- tests --recursive",
     "report": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "clear": "./node_modules/.bin/rimraf coverage",
     "precommit": "npm run lint && npm test",
     "prepush": "npm run lint && npm test"
   },
   "engines": {
-    "node": ">=7.0.0"
+    "node": ">=7.6.0"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,9 @@
     "yeps",
     "recursive",
     "promise",
-    "generator"
+    "generator",
+    "async",
+    "await"
   ],
   "author": "Evheniy Bystrov",
   "license": "MIT",

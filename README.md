@@ -34,7 +34,7 @@ It helps with looping promises. It's promises middleware realisation.
         const context = {};
         
         const promises = [
-            async context => {
+            async (context) => {
                 // some stuff with context
             },
             ...
@@ -46,7 +46,6 @@ It helps with looping promises. It's promises middleware realisation.
             // error handler
         }
     }    
-        
-## Links
 
-* [yeps](https://github.com/evheniy/yeps) - Yet Another Event Promised Server
+
+#### [YEPS documentation](http://yeps.info/)

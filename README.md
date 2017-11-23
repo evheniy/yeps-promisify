@@ -37,6 +37,9 @@ It helps with looping promises. It's promises middleware realisation.
             async (context) => {
                 // some stuff with context
             },
+            async (context) => {
+                // some other stuff with context
+            },
             ...
         ];
         

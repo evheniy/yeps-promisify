@@ -4,6 +4,7 @@ const promisify = module.exports = async (ctx, promises, index = 0) => {
   const promise = promises[index];
 
   if (promise) {
+    debug('Index:', index);
     debug(promise.toString());
 
     await promise(ctx);
